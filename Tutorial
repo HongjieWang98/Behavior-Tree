@@ -1,0 +1,9 @@
+Sequence 节点
+每当 Sequence 节点被执行时, 它都会依次执行它的子节点, 直到有一个子节点返回 Failure 或 Running. Sequence 节点的返回值就是最后一个子节点的返回值. 写成代码就是这样的:
+def execute(self):
+    for node in self.children:
+        res = node.execute()
+        if res != "Success":
+            return res
+
+    return "Success"
