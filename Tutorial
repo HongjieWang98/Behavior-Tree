@@ -7,3 +7,7 @@ def execute(self):
             return res
 
     return "Success"
+
+Sequence 节点有点像逻辑与的操作: 只有所有的节点返回成功它才返回成功. 我们通常用符号 "
+→
+" 表示 Sequence 节点.
